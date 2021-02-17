@@ -7,7 +7,7 @@ const Evo = () => {
 
   useEffect(() => {
     const user1 = {
-      name: "Scoot Fergie",
+      name: "Scott Fergie",
       natioality: "Scotland",
       score: 9,
     };
@@ -27,6 +27,11 @@ const Evo = () => {
       <h2>OOP</h2>
       <p>Name: {name}</p>
       <p>Nationality: {nation}</p>
+
+      <form>
+        <label>Name:</label>
+        <input type="text" />
+      </form>
     </div>
   );
 };

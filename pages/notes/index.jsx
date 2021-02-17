@@ -21,6 +21,11 @@ const Pages = () => {
             <a>moon above</a>
           </Link>
         </li>
+        <li>
+          <Link href="/notes/fetchtest">
+            <a>IVY</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

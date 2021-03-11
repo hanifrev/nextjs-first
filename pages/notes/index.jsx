@@ -23,7 +23,12 @@ const Pages = () => {
         </li>
         <li>
           <Link href="/notes/fetchtest">
-            <a>IVY</a>
+            <a>PATTERN IVY</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/notes/intreact_fm">
+            <a>Intermediate React v2 Frontend Master</a>
           </Link>
         </li>
       </ul>

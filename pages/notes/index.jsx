@@ -18,17 +18,22 @@ const Pages = () => {
         </li>
         <li>
           <Link href="/notes/evo">
-            <a>moon above sun below</a>
+            <a>JS hard parts v2</a>
           </Link>
         </li>
         <li>
           <Link href="/notes/fetchtest">
-            <a>PATTERN IVY</a>
+            <a>Intro to nextjs</a>
           </Link>
         </li>
         <li>
           <Link href="/notes/intreact_fm">
             <a>Intermediate React v2 Frontend Master</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/notes/IntroReactV6">
+            <a>Intro React v6 Frontend Master</a>
           </Link>
         </li>
       </ul>

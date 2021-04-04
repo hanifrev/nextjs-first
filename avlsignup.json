@@ -1,0 +1,18 @@
+{
+  "code": "inventory12",
+  "source": "Inventory12",
+  "title": "Inventory12",
+  "sheet_id": "1QRMo4iyeimjIhXh_LUURKNzDN3qnCwiAvcHrpkIgivg",
+  "main_url": "https://app.avancevl.com/en/inventory12",
+  "prefix": "IN12",
+  "mixpanel_project": "2342185",
+  "mixpanel_token": "56b995d3ed5013358a129ceb4d5d4f18",
+  "mixpanel_secret": "86948c3590089b9e9d10b20ada671450",
+  "mixpanel_apiauth": "ODY5NDhjMzU5MDA4OWI5ZTlkMTBiMjBhZGE2NzE0NTA6",
+  "slack_webhook_engineer": "https://hooks.slack.com/services/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",
+  "slack_webhook_marketeer": "https://hooks.slack.com/services/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",
+  "google_recaptcha_site_key": "6LcMV_cZAAAAAG9mFuv7iNLNUp9M4GvAb6Fwhkcf",
+  "google_recaptcha_secret_key": "6LcMV_cZAAAAAPdLC8K7_pwtDvrlonOtMmrebOi1",
+  "remark": null,
+  "status": 1
+}

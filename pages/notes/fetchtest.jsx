@@ -1,7 +1,7 @@
 import React from "react";
 
 function Ivy() {
-  console.log("test");
+  // console.log("test");
   return (
     <ul>
       <div>test</div>
@@ -11,7 +11,7 @@ function Ivy() {
 
 export default Ivy;
 
-export function getStaticProps(context) {
+export function getStaticPaths() {
   console.log(context);
 
   return {

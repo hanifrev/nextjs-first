@@ -2,7 +2,8 @@ body {
   background: url("https://upload.wikimedia.org/wikipedia/commons/7/71/Vue_du_Cap_trinit%C3%A9_pr%C3%A8s_de_la_Statue.jpg");
   height: 100vh;
   background-size: cover;
-  overflow: hidden;
+  background-attachment: fixed;
+  overflow: auto;
   font-family: "Ubuntu", sans-serif;
 }
 a {
@@ -61,4 +62,9 @@ a {
 
 .search-params button:focus {
   border: 1px solid cornflowerblue;
+}
+
+.Collapsible {
+  background-color: aqua;
+  width: 20%;
 }

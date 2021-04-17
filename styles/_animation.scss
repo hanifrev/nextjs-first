@@ -1,0 +1,20 @@
+.faq__desc.show-description {
+  height: 5rem;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background-color: #3763ef;
+  border-radius: 8px;
+}
+
+/* Arrows */
+
+/* closed */
+.faq__question-button::after {
+  transition: transform 300ms ease-out;
+  background-color: #3763ef;
+}
+
+/* open */
+.font-weight-bold::after {
+  transform: rotate(720deg);
+}

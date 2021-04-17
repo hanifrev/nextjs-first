@@ -10,6 +10,7 @@ const Page = () => {
         textAlign: "center",
         padding: "1% 0% 0% 0%",
         lineHeight: "2em",
+        height: "100vh",
       }}
     >
       <h2>W E L C O M E</h2>

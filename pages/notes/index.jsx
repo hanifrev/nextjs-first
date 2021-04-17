@@ -36,6 +36,11 @@ const Pages = () => {
             <a>Intro React v6 Frontend Master</a>
           </Link>
         </li>
+        <li>
+          <Link href="/notes/pwa">
+            <a>Progressive Web App</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

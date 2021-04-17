@@ -1,0 +1,94 @@
+.faq {
+  width: 100%;
+  padding-top: 65px;
+  padding-bottom: 80px;
+  color: #ffffff;
+
+  &__title {
+    margin: 0;
+    padding-bottom: 25px;
+    color: #ffffff;
+  }
+
+  @media only screen and (max-width: 600px) {
+    &__list {
+      padding: 3.2rem 0 4.8rem;
+      overflow-y: hidden;
+      overflow-x: auto;
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      position: absolute;
+      left: 0;
+      -webkit-overflow-scrolling: touch;
+      z-index: 0;
+    }
+  }
+
+  &__question {
+    @media only screen and (max-width: 600px) {
+      max-width: 256px;
+      width: 100%;
+      // position: relative;
+    }
+    max-width: 350px;
+    width: 100%;
+    // border-bottom: 1px solid #0400fa;
+    color: #ffffff;
+    border: none;
+    // background-color: #3763ef;
+  }
+
+  &__question-button {
+    transform: translateY(7px);
+    width: 100%;
+    display: flex;
+    font-weight: 700;
+    font-size: 14px;
+    justify-content: space-between;
+    border: none !important;
+    background-color: transparent;
+    padding: 0px;
+    cursor: pointer;
+    color: #ffffff;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    // border-width: 0;
+    border-start-end-radius: 8px;
+    // background-color: #3763ef;
+
+    &::after {
+      // content: url(https://raw.githubusercontent.com/ALapina/FAQ-Accordion-Card-React/abe6d6b38571bec87c46576326caad1d05a5f0c7/src/images/icon-arrow-down.svg);
+      // margin-right: 17px;
+      // transform: rotate(90deg);
+      background-color: #3763ef;
+    }
+
+    &:hover {
+      // color: #f03030;
+      background-color: #3763ef;
+    }
+    &:active {
+      background-color: #3763ef;
+    }
+    &:focus {
+      background-color: #3763ef;
+      outline: none;
+    }
+  }
+
+  &__desc {
+    margin-left: -40px;
+    padding-right: 17px;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 200ms ease-out;
+  }
+}

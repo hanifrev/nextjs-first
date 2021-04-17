@@ -11,10 +11,10 @@ function Ivy() {
 
 export default Ivy;
 
-export function getStaticPaths() {
-  console.log(context);
+// export function getStaticPaths() {
+//   console.log(context);
 
-  return {
-    props: {},
-  };
-}
+//   return {
+//     props: {},
+//   };
+// }

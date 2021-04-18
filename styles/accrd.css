@@ -19,9 +19,11 @@ body {
 .accordion {
   width: 100%;
   max-width: 470px;
+  transform: translateX(4rem);
 }
 .panel {
-  background-color: #f0ebe1;
+  background-color: #3763ef;
+  border-radius: 8px;
 }
 .panel__label {
   position: relative;
@@ -36,6 +38,7 @@ body {
   font-family: inherit;
   transition: color 0.2s linear;
   cursor: pointer;
+  color: #ffffff;
 }
 .panel__label:focus {
   outline: none;
@@ -49,20 +52,26 @@ body {
   width: 22px;
   height: 2px;
   margin-top: -2px;
-  background-color: #372717;
+  background-color: #ffffff;
+  transform: translateX(-31rem);
+  visibility: hidden;
 }
 .panel__label:before {
-  transform: rotate(-90deg);
-  transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+  /* transform: rotate(-90deg);
+  transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1); */
+  /* transform: translateX(-31rem); */
+  visibility: hidden;
 }
 .panel[aria-expanded="true"] .panel__content {
   opacity: 1;
 }
 .panel[aria-expanded="true"] .panel__label {
-  color: #957029;
+  color: #ffffff;
 }
 .panel[aria-expanded="true"] .panel__label:before {
-  transform: rotate(0deg);
+  /* transform: rotate(0deg); */
+  transform: translateX(-35rem);
+  visibility: visible;
 }
 .panel__inner {
   overflow: hidden;
@@ -72,7 +81,7 @@ body {
 .panel__content {
   margin: 5px 25px 25px;
   font-size: 14px;
-  color: #756658;
+  color: #ffffff;
   opacity: 0;
   transition: opacity 0.3s linear 0.18s;
 }

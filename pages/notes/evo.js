@@ -127,29 +127,24 @@ const Evo = () => {
 
   const panels = [
     {
-      label: "How many team members can I invite?",
+      label: "historical_balance",
       content:
-        "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.",
+        "Description of historical_balance. Bortom trygghet göms begär När månen slickar sin atmosfär",
     },
     {
-      label: "Screen Readers Actually Read That Stuff",
+      label: "owner",
       content:
-        'Most assistive devices will read aloud text inserted via CSS, and many of the Unicode characters icon fonts depend on are no exception. Best-case scenario, your "favorite" icon gets read aloud as "black favorite star." Worse-case scenario, it\'s read as "unpronounceable" or skipped entirely.',
+        "Description of owner. Bortom trygghet göms begär När månen slickar sin atmosfär",
     },
     {
-      label: "They Fail Poorly and Often",
+      label: "transaction",
       content:
-        'When your icon font fails, the browser treats it like any other font and replaces it with a fallback. Best-case scenario, you\'ve chosen your fallback characters carefully and something weird-looking but communicative still loads. Worse-case scenario (and far more often), the user sees something completely incongruous, usually the dreaded "missing character" glyph.',
+        "Description of transaction. Bortom trygghet göms begär När månen slickar sin atmosfär",
     },
     {
-      label: "They're a Nightmare if You're Dyslexic",
+      label: "account_type",
       content:
-        "Many dyslexic people find it helpful to swap out a website's typeface for something like OpenDyslexic. But icon fonts get replaced as well, which makes for a frustratingly broken experience.",
-    },
-    {
-      label: "There's Already a Better Way",
-      content:
-        "SVG is awesome for icons! It's a vector image format with optional support for CSS, JavaScript, reusability, accessibility and a bunch more. It was made for this sort of thing.",
+        "Description of account_type. Bortom trygghet göms begär När månen slickar sin atmosfär",
     },
   ];
 

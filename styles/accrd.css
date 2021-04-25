@@ -19,16 +19,23 @@ body {
 .accordion {
   width: 100%;
   max-width: 470px;
-  transform: translateX(4rem);
+  transform: translateX(1rem);
   display: flex;
   flex-direction: row;
+  overflow-x: auto;
+  position: absolute;
 }
 @media only screen and (min-width: 600px) {
   .accordion {
     flex-direction: column;
+    transform: translateX(4rem);
+    overflow-x: unset;
   }
 }
-
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
 .panel {
   /* background-color: #3763ef; */
   border-radius: 8px;
@@ -70,6 +77,17 @@ body {
   /* transform: translateX(-31rem); */
   visibility: hidden;
   content: url(https://i.imgur.com/FmjmyqE.png);
+  display: none;
+}
+@media only screen and (min-width: 600px) {
+  .panel__label:before {
+    /* transform: rotate(-90deg);
+    transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1); */
+    /* transform: translateX(-31rem); */
+    visibility: hidden;
+    content: url(https://i.imgur.com/FmjmyqE.png);
+    display: block;
+  }
 }
 .panel[aria-expanded="true"] {
   background-color: #3763ef;

@@ -41,6 +41,11 @@ const Pages = () => {
             <a>Progressive Web App</a>
           </Link>
         </li>
+        <li>
+          <Link href="/notes/getify_course">
+            <a>Getify Course Related</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

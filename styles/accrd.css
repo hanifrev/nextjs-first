@@ -20,9 +20,17 @@ body {
   width: 100%;
   max-width: 470px;
   transform: translateX(4rem);
+  display: flex;
+  flex-direction: row;
 }
+@media only screen and (min-width: 600px) {
+  .accordion {
+    flex-direction: column;
+  }
+}
+
 .panel {
-  background-color: #3763ef;
+  /* background-color: #3763ef; */
   border-radius: 8px;
 }
 .panel__label {
@@ -33,8 +41,8 @@ body {
   border: none;
   text-align: left;
   padding: 25px 60px 25px 25px;
-  font-weight: 500;
-  font-size: 17px;
+  font-weight: 700;
+  font-size: 14px;
   font-family: inherit;
   transition: color 0.2s linear;
   cursor: pointer;
@@ -52,7 +60,7 @@ body {
   width: 22px;
   height: 2px;
   margin-top: -2px;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   transform: translateX(-31rem);
   visibility: hidden;
 }
@@ -61,6 +69,13 @@ body {
   transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1); */
   /* transform: translateX(-31rem); */
   visibility: hidden;
+  content: url(https://i.imgur.com/FmjmyqE.png);
+}
+.panel[aria-expanded="true"] {
+  background-color: #3763ef;
+}
+.panel[aria-expanded="false"]:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .panel[aria-expanded="true"] .panel__content {
   opacity: 1;
@@ -81,9 +96,9 @@ body {
 .panel__content {
   margin: 5px 25px 25px;
   font-size: 14px;
-  color: #ffffff;
-  opacity: 0;
+  color: #d1d1d1;
   transition: opacity 0.3s linear 0.18s;
+  font-weight: 400;
 }
 .panel:not(:last-child) {
   margin-bottom: 3px;

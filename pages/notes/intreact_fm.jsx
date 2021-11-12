@@ -3,6 +3,22 @@ import StateExample from "../../src/component/StateExample";
 import EffectExample from "../../src/component/EffectExample";
 
 const IntReact = () => {
+
+  const country = [
+    {
+      name: 'Germany',
+      capital: 'Berlin',
+      continent: 'Europe',
+      objectID: 0
+    },
+    {
+      name: 'Russia',
+      capital: 'Moscow',
+      continent: 'Europe/Asia',
+      objectID: 0
+    }
+  ]
+
   const [theState, setTheState] = useState();
   const [counter, setCounter] = useState(0);
   const [imgX, setImgX] = useState(true);
@@ -29,6 +45,12 @@ const IntReact = () => {
     return () => clearInterval(interval)
   }, [imgX])
 
+  const [searchT, setSearchT] = useState("");
+
+  const handleChange = e => {
+    setSearchT(e.target.value)
+  }
+
   return (
     <div>
       test
@@ -41,9 +63,31 @@ const IntReact = () => {
       <button onClick={ctn}>{counter}</button>
       <button onClick={reset}>reset</button>
       <p>{counter}</p>
-      <img alt='' src={imgX ? 'https://i.imgur.com/54nCqZJ.jpg' : 'https://i.imgur.com/QPhQ2Su.jpg'} />
+      <hr />
+      <div>
+        <label htmlFor="search">Search: </label>
+        <input id="search" type="text" onChange={handleChange} />
+      </div>
+      <div>
+        <h3>Output: {searchT}</h3>
+      </div>
+      <img style={{
+        paddingTop: "5rem",
+        width: "30%"
+      }} alt='' src={imgX ? 'https://i.imgur.com/54nCqZJ.jpg' : 'https://i.imgur.com/QPhQ2Su.jpg'} />
     </div>
   );
+
+      // const List = props =>
+      //   props.list.map(item => (
+      //     <div key={item.objectID}>
+      //       <span>{item.name}</span>
+      //       <span>{item.capital}</span>
+      //       <span>{item.continent}</span>
+      //     </div>
+
+      //   ))
+
 };
 
 export default IntReact;

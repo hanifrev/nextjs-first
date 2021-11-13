@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Germany",
+      "capital": "Berlin",
+      "continent": "Europe",
+      "objectID": 0
+    },
+    {
+      "name": "Russia",
+      "capital": "Moscow",
+      "continent": "Europe/Asia",
+      "objectID": 0
+    },
+    {
+        "name": "Japan",
+        "capital": "Tokyo",
+        "continent": "Asia",
+        "objectID": 0
+    },
+    {
+        "name": "Canada",
+        "capital": "Ottawa",
+        "continent": "North America",
+        "objectID": 0
+      }
+  ]

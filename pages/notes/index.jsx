@@ -46,6 +46,11 @@ const Pages = () => {
             <a>Getify Course Related</a>
           </Link>
         </li>
+        <li>
+          <Link href="/notes/hookpract">
+            <a>Hook</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

@@ -3,24 +3,56 @@
       "name": "Germany",
       "capital": "Berlin",
       "continent": "Europe",
-      "objectID": 0
+      "key": 0,
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png"
     },
     {
       "name": "Russia",
       "capital": "Moscow",
       "continent": "Europe/Asia",
-      "objectID": 0
+      "key": 1,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Flag_of_Russia_%281991%E2%80%931993%2C_3-2%29.svg/1280px-Flag_of_Russia_%281991%E2%80%931993%2C_3-2%29.svg.png"
     },
     {
         "name": "Japan",
         "capital": "Tokyo",
         "continent": "Asia",
-        "objectID": 0
+        "key": 2,
+        "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png"
     },
     {
         "name": "Canada",
         "capital": "Ottawa",
         "continent": "North America",
-        "objectID": 0
-      }
+        "key": 3,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg"
+    },
+    {
+        "name": "Australia",
+        "capital": "Canberra",
+        "continent": "Australia",
+        "key": 4,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1280px-Flag_of_Australia_%28converted%29.svg.png"
+    },
+    {
+        "name": "Scotland",
+        "capital": "Edinburg",
+        "continent": "Europe",
+        "key": 5,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/1/10/Flag_of_Scotland.svg"
+    },
+    {
+        "name": "Egypt",
+        "capital": "Cairo",
+        "continent": "Africa",
+        "key": 6,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Egypt_%28variant%29.svg/1280px-Flag_of_Egypt_%28variant%29.svg.png"
+    },
+    {
+        "name": "Argentina",
+        "capital": "Buenos Aires",
+        "continent": "South America",
+        "key": 7,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1200px-Flag_of_Argentina.svg.png"
+    }
   ]

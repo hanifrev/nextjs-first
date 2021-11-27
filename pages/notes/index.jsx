@@ -23,7 +23,7 @@ const Pages = () => {
         </li>
         <li>
           <Link href="/notes/fetchtest">
-            <a>Intro to nextjs</a>
+            <a>Data fetching</a>
           </Link>
         </li>
         <li>

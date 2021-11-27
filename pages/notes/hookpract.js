@@ -3,6 +3,8 @@ import List from "../../src/component/listing";
 import Search from "../../src/component/searching";
 import Country from "../../src/country.json"
 import Pane from "../../src/component/Pane";
+import NavExam from "../../src/component/NavExam";
+import Foobar from "../../src/component/navtest/Foobar";
 
 const Hookpract = () => {
 
@@ -29,7 +31,9 @@ const Hookpract = () => {
 
     return (
         <div>
+            <Foobar />
             asdzxcqwe
+            <NavExam />
             <Search search={searchTerm} onSeacrh={handleSearch} />
             <List list={searchedCountry} />
 

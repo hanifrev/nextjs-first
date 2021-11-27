@@ -1,20 +1,27 @@
 import React from "react";
+import Articles from "../../src/component/Articles";
 
-function Ivy() {
-  // console.log("test");
+function Ivy({articles}) {
+  
+  // console.log(articles);
+
   return (
-    <ul>
-      <div>test</div>
-    </ul>
+
+    <div>
+      <Articles articles={articles} />
+    </div>
   );
 }
 
 export default Ivy;
 
-// export function getStaticPaths() {
-//   console.log(context);
-
-//   return {
-//     props: {},
-//   };
-// }
+export const getStaticProps = async () => {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=10`)
+  const articles = await res.json()
+  
+  return {
+    props: {
+      articles
+    }
+  }
+}

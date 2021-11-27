@@ -1,0 +1,15 @@
+
+.hidden {
+    visibility: hidden;
+    position: fixed;
+  }
+
+.bg {
+  background-color: darkcyan;
+  position: absolute;
+  width: 91%;
+}
+
+.listnav {
+  list-style: none;
+}

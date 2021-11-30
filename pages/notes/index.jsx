@@ -56,6 +56,11 @@ const Pages = () => {
             <a>Fetch2</a>
           </Link>
         </li>
+        <li>
+          <Link href="/notes/cat">
+            <a>Cat Fact</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

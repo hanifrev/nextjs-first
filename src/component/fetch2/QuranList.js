@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 
 const QuranList = ({quran}) => {
 
@@ -19,6 +20,9 @@ const QuranList = ({quran}) => {
 
     return (
         <div>
+            <Head>
+                <title>Quran</title>
+            </Head>
             {quran.map((quran, key) => {
                 return (
                     <Link href="/quran/[id]" as={`/quran/${quran.number_of_surah}`}>

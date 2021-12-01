@@ -1,4 +1,5 @@
 import {useRouter} from 'next/router'
+import Head from 'next/head'
 
 const Surah = ({quran}) => {
 
@@ -15,12 +16,14 @@ const Surah = ({quran}) => {
     console.log(verse)
 
     return (
-        <div>
-            <>
-            <h2>{quran.name}</h2>
-            <h4>{verse}</h4>
-            </>
-        </div>
+        <><Head>
+            <title>{quran.name}</title>
+        </Head><div>
+                <>
+                    <h2>{quran.name}</h2>
+                    <h4>{verse}</h4>
+                </>
+            </div></>
     )
 }
 

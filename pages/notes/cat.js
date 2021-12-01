@@ -10,7 +10,7 @@ const Cat = ({cat}) => {
 
     return (
         <div style={styles}>
-            <h5>Cat facts, reload to get another facts</h5>
+            <h5>Daily random cat facts</h5>
             <br />
             <h1>{cat.fact}</h1>
         </div>

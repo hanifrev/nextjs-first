@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import StateExample from "../../src/component/StateExample";
 import EffectExample from "../../src/component/EffectExample";
+import NewState from "../../src/component/NewState";
+import EffectEx from "../../src/component/EffectEx";
+import Head from 'next/head'
 
 const IntReact = () => {
 
@@ -53,6 +56,14 @@ const IntReact = () => {
 
   return (
     <div>
+      <Head>
+        <title>qwerty</title>
+      </Head>
+
+      <NewState />
+      <hr />
+      <EffectEx />
+      <hr />
       test
       <StateExample />
       <hr />

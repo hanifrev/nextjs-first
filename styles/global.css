@@ -92,3 +92,22 @@ a {
   width: 80%;
   transform: translateX(8rem);
 }
+
+.njajal {
+  background-color: cornflowerblue;
+}
+.njajal:active {
+  background-color: aqua;
+}
+.njajal:focus {
+  background-color: aqua;
+}
+.njajal:target {
+  background-color: aqua;
+}
+
+.todo {
+  display: flex;
+  width: 15rem;
+  justify-content: space-between;
+}

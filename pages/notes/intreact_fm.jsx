@@ -3,6 +3,7 @@ import StateExample from "../../src/component/StateExample";
 import EffectExample from "../../src/component/EffectExample";
 import NewState from "../../src/component/NewState";
 import EffectEx from "../../src/component/EffectEx";
+import ImageState from "../../src/component/ImageState";
 import Head from 'next/head'
 
 const IntReact = () => {
@@ -64,6 +65,7 @@ const IntReact = () => {
       <hr />
       <EffectEx />
       <hr />
+      <ImageState />
       test
       <StateExample />
       <hr />

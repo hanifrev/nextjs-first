@@ -1,9 +1,16 @@
 import React from 'react'
 
-const NewStateTodos = ({todo}) => {
+const NewStateTodos = ({ todo, index, completeTodo }) => {
     return (
-        <div>
+        <div
+            className="todo"
+            style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
+        >
             {todo.text}
+            
+            <div>
+                <button onClick={() => completeTodo(index)}>complete</button>
+            </div>
         </div>
     )
 }

@@ -1,0 +1,17 @@
+[
+    {
+        "text": "norwegian",
+        "img": "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/10/22032626/fakta-menarik-mengenai-norwegian-forest-cat-halodoc.jpg",
+        "id": "0"
+    },
+    {
+        "text": "siberian",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Siberian_cat_in_summercoat.JPG/1200px-Siberian_cat_in_summercoat.JPG",
+        "id": "1"
+    },
+    {
+        "text": "lynx",
+        "img": "https://cdn.pixabay.com/photo/2017/09/22/20/14/lynx-2776911_960_720.jpg",
+        "id": "2"
+    }
+]

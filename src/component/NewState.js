@@ -45,10 +45,16 @@ const NewState = ({}) => {
         setTodos(newTodos)
     }
 
+    const completeTodo = index => {
+        const newTodos = [...todos];
+        newTodos[index].isCompleted = true
+        setTodos(newTodos)
+    }
+
     return (
         <div>
             {todos.map((todo, index) => (
-                <NewStateTodos key={index} index={index} todo={todo} />
+                <NewStateTodos key={index} index={index} todo={todo} completeTodo={completeTodo} />
             ))}
             <TodoForm addTodo={addTodo} />
         </div>

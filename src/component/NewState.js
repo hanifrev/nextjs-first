@@ -51,10 +51,22 @@ const NewState = ({}) => {
         setTodos(newTodos)
     }
 
+    const removeTodo = index => {
+        const newTodos = [...todos];
+        newTodos.splice(index, 1);
+        setTodos(newTodos);
+    }
+
     return (
         <div>
             {todos.map((todo, index) => (
-                <NewStateTodos key={index} index={index} todo={todo} completeTodo={completeTodo} />
+                <NewStateTodos 
+                    key={index} 
+                    index={index}  
+                    todo={todo} 
+                    completeTodo={completeTodo} 
+                    removeTodo={removeTodo} 
+                />
             ))}
             <TodoForm addTodo={addTodo} />
         </div>

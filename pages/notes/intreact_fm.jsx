@@ -4,6 +4,7 @@ import EffectExample from "../../src/component/EffectExample";
 import NewState from "../../src/component/NewState";
 import EffectEx from "../../src/component/EffectEx";
 import ImageState from "../../src/component/ImageState";
+import Football from "../../src/component/Football";
 import Head from 'next/head'
 
 const IntReact = () => {
@@ -84,6 +85,7 @@ const IntReact = () => {
       <div>
         <h3>Output: {searchT}</h3>
       </div>
+      <Football />
       <img style={{
         paddingTop: "5rem",
         width: "30%"

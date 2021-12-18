@@ -5,6 +5,7 @@ import NewState from "../../src/component/NewState";
 import EffectEx from "../../src/component/EffectEx";
 import ImageState from "../../src/component/ImageState";
 import Football from "../../src/component/Football";
+import ToogleTest from "../../src/component/ToogleTest";
 import Head from 'next/head'
 
 const IntReact = () => {
@@ -61,7 +62,8 @@ const IntReact = () => {
       <Head>
         <title>qwerty</title>
       </Head>
-
+      <ToogleTest />
+      <hr />
       <NewState />
       <hr />
       <EffectEx />

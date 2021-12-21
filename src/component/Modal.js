@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Modal = props => {
-    if (!props.show) {
+const Modal = ({show, onClose}) => {
+    if (!show) {
         return null
     }
 
@@ -13,10 +13,11 @@ const Modal = props => {
                 </div>
                 <div>
                     <p>This is modal</p>
+                    {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/HolkerStreet.png/800px-HolkerStreet.png" alt="test" /> */}
                 </div>
                 <div>
-                    <button onClick={props.onClose}>
-                        cta
+                    <button onClick={onClose}>
+                        close
                     </button>
                 </div>
             </div>

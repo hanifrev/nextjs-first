@@ -4,7 +4,7 @@ const ToogleTest = () => {
     const [show, setShow] = useState(false)
     const Imgs = () => {
         return (
-            <div>
+            <div className="showtoggle">
                 <img src="https://www.kabarpenumpang.com/wp-content/uploads/2017/06/lK61rWG.jpg" alt="test" />
                 <ul>
                     <li>test 1</li>

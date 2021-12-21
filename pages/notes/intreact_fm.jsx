@@ -7,6 +7,7 @@ import ImageState from "../../src/component/ImageState";
 import Football from "../../src/component/Football";
 import ToogleTest from "../../src/component/ToogleTest";
 import Head from 'next/head'
+import Modal from "../../src/component/Modal";
 
 const IntReact = () => {
 
@@ -28,6 +29,7 @@ const IntReact = () => {
   const [theState, setTheState] = useState();
   const [counter, setCounter] = useState(0);
   const [imgX, setImgX] = useState(true);
+  const [show, setShow] = useState(false)
 
   const alertTest = () => {
     // alert("wewewwewe");
@@ -62,6 +64,11 @@ const IntReact = () => {
       <Head>
         <title>qwerty</title>
       </Head>
+      <div>
+        <button onClick={() => setShow(true)}>test modal</button>
+        <Modal onClose={() => setShow(false)} show={show} />
+      </div>
+      <hr />
       <ToogleTest />
       <hr />
       <NewState />

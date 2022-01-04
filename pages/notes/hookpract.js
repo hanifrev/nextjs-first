@@ -5,6 +5,7 @@ import Country from "../../src/country.json"
 import Pane from "../../src/component/Pane";
 import NavExam from "../../src/component/NavExam";
 import Foobar from "../../src/component/navtest/Foobar";
+import Effct from "../../src/component/effct";
 
 const Hookpract = () => {
 
@@ -43,6 +44,7 @@ const Hookpract = () => {
             </div>
 
             <Pane />
+            <Effct />
         </div>
     )
 }

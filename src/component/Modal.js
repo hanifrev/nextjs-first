@@ -6,8 +6,8 @@ const Modal = ({show, onClose}) => {
     }
 
     return (
-        <div className="modal">
-            <div className="bg-modal">
+        <div className="modal" onClick={onClose}>
+            <div className="bg-modal" onClick={e => e.stopPropagation()}>
                 <div>
                     <h2>Modal Title</h2>
                 </div>

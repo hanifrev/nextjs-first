@@ -16,14 +16,17 @@ const Surah = ({quran}) => {
     console.log(verse)
 
     return (
-        <><Head>
+        <>
+        <Head>
             <title>{quran.name}</title>
-        </Head><div>
+        </Head>
+            <div>
                 <>
                     <h2>{quran.name}</h2>
                     <h4>{verse}</h4>
                 </>
-            </div></>
+            </div>
+        </>
     )
 }
 

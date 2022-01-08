@@ -2,7 +2,7 @@ import Link from 'next/link'
 import QuranList from '../../src/component/fetch2/QuranList'
 
 const Fetch2 = ({quran}) => {
-
+    console.log(quran)
     return (
         <div>
             <QuranList quran={quran} />

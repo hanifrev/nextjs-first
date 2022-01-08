@@ -6,6 +6,7 @@ import Pane from "../../src/component/Pane";
 import NavExam from "../../src/component/NavExam";
 import Foobar from "../../src/component/navtest/Foobar";
 import Effct from "../../src/component/effct";
+import Callbackhook from "../../src/callbackhook";
 
 const Hookpract = () => {
 
@@ -45,6 +46,8 @@ const Hookpract = () => {
 
             <Pane />
             <Effct />
+            <hr />
+            <Callbackhook />
         </div>
     )
 }

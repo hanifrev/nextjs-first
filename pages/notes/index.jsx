@@ -61,6 +61,21 @@ const Pages = () => {
             <a>Cat Fact</a>
           </Link>
         </li>
+        <li>
+          <Link href="/notes/Crud">
+            <a>Crud</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/notes/adzan">
+            <a>Adzan</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/notes/mboh">
+            <a>Crud2</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

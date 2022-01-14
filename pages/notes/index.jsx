@@ -76,6 +76,16 @@ const Pages = () => {
             <a>Crud2</a>
           </Link>
         </li>
+        <li>
+          <Link href="/notes/Crud2">
+            <a>Crud3</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/notes/Weather">
+            <a>Weather</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

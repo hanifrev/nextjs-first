@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
 import Link from 'next/link'
+import SideNav from '../../src/component/SideNav'
 
 const Mboh = () => {
     const [show, setShow] = useState(false)
     const [items, setItems] = useState([])
     const [itemName, setItemName] = useState("");
+    const [loading, setLoading] = useState(true)
 
     const addData = (e) => {
        e.preventDefault()
@@ -21,6 +23,7 @@ const Mboh = () => {
            }
        ]);
        setItemName("")
+       setLoading(false)
     }
 
     const deleteData = (index) => {
@@ -36,6 +39,8 @@ const Mboh = () => {
 
     return (
         <div>
+            <SideNav />
+            <br />
             <form onSubmit={addData}>
                 <label>
                     <input 
@@ -47,7 +52,10 @@ const Mboh = () => {
                     <button type="submit">ADD</button>
                 </label>
             </form>
-            <ul>
+            {loading ? (
+                <p>NO DATA</p>
+            ) : (
+                <ul>
                 {items.map((x) => (
                     <li key={x.id} style={{display: 'flex', flexDirection: 'row'}} >
                         <div style={styles}>
@@ -59,6 +67,8 @@ const Mboh = () => {
                     </li>
                 ))}
             </ul>
+            ) }
+            
         </div>
     )
 }

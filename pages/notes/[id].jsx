@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import ReactDOM from "react-dom";
 // import { useRouter } from "next/dist/next-server/server/router";
+import Sidebar from "../../src/component/Sidebar";
 
 const Page = () => {
   const Router = useRouter();
@@ -111,10 +112,15 @@ const Page = () => {
   ];
 
   return (
-    <div>
-      <div>i will endure hide away</div>
-      <div>the id : {id} </div>
-      <Accordion panels={panels} />
+    <div className="dynamic-id">
+      <div>
+        <Sidebar />
+      </div>
+      <div>
+        <div>i will endure hide away</div>
+        <div>the id : {id} </div>
+        <Accordion panels={panels} />
+      </div>
     </div>
   );
 };

@@ -31,7 +31,14 @@ const Weather = () => {
 
         // this is destructuring approach
         // const {temp, maxTemp, minTemp, humidity} = data.main
-        // console.log(temp)
+        // const {country} = data.sys
+        // const {description, icon} = data.weather[0]
+        // const {name, dt} = data 
+        // const {speed} = data.wind
+
+        // console.log(Math.round(temp))
+        // console.log(name)
+
 
         setCity(data.name)
         setCountry(data.sys.country)
@@ -73,10 +80,7 @@ const Weather = () => {
                 />
                 <button onClick={dataweather}>Search</button>
             </div>
-            {loading ? (
-                <h2>Location Not Found</h2>
-            ) : (
-                <div>
+            <div>
                     <h1>{city}, {country}</h1>
                     <p>{time}</p>
                     <img 
@@ -88,6 +92,10 @@ const Weather = () => {
                     <p>Humidity: {humid}%</p>
                     <p>Wind: {wind} mps</p>
                 </div>
+            {loading ? (
+                <h2>Location Not Found</h2>
+            ) : (
+                <h2>{city}, {temp}</h2>
             )}
             
         </div>

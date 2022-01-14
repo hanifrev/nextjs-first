@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import ReactDOM from "react-dom";
 // import { useRouter } from "next/dist/next-server/server/router";
-import Sidebar from "../../src/component/Sidebar";
+import SideMenu from "./SideMenu";
 
 const Page = () => {
   const Router = useRouter();
@@ -114,7 +114,7 @@ const Page = () => {
   return (
     <div className="dynamic-id">
       <div>
-        <Sidebar />
+        <SideMenu />
       </div>
       <div>
         <div>i will endure hide away</div>

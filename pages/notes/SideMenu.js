@@ -4,6 +4,17 @@ import Sidebar from '../../src/component/Sidebar'
 const SideMenu = () => {
     const [show, setShow] = useState(false)
 
+    const sideCont = {
+        active: {
+            width: '13rem',
+            height: '100vh'
+        },
+        inactive: {
+            width: '3rem',
+            height: '100vh'
+        }
+    }
+
     const btnStyle = {
         active: {
             width: '200px',
@@ -17,7 +28,7 @@ const SideMenu = () => {
         }
     }
     return (
-        <div className='sideapp'>
+        <div style={show ? sideCont.active : sideCont.inactive}>
             <div style={show ? btnStyle.active : btnStyle.inactive}>
                 <button onClick={() => setShow(!show)}>
                     {show ? "X" : "="}

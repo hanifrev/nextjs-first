@@ -11,9 +11,9 @@ const Surah = ({quran}) => {
             v.text
         )
     })
-    const verse = JSON.stringify(obj)
+    // const verse = JSON.stringify(obj)
 
-    console.log(verse)
+    // console.log(obj[1])
 
     return (
         <>
@@ -23,7 +23,7 @@ const Surah = ({quran}) => {
             <div>
                 <>
                     <h2>{quran.name}</h2>
-                    <h4>{verse}</h4>
+                    <p style={{fontSize: '30px'}}>{obj}</p>
                 </>
             </div>
         </>

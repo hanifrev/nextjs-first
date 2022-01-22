@@ -12,7 +12,7 @@ const Pages = () => {
           </Link>
         </li>
         <li>
-          <Link href="/notes/[id]" as={"/notes/btbam"}>
+          <Link href="notes/[id]" as={"/notes/btbam"}>
             <a>between the buried and me</a>
           </Link>
         </li>
@@ -47,42 +47,42 @@ const Pages = () => {
           </Link>
         </li>
         <li>
-          <Link href="/notes/hookpract">
+          <Link href="notes/hookpract">
             <a>Hook</a>
           </Link>
         </li>
         <li>
-          <Link href="/notes/fetch2">
+          <Link href="notes/fetch2">
             <a>Fetch2</a>
           </Link>
         </li>
         <li>
-          <Link href="/notes/cat">
+          <Link href="notes/cat">
             <a>Cat Fact</a>
           </Link>
         </li>
         <li>
-          <Link href="/notes/Crud">
+          <Link href="notes/Crud">
             <a>Crud</a>
           </Link>
         </li>
         <li>
-          <Link href="/notes/adzan">
+          <Link href="notes/adzan">
             <a>Adzan</a>
           </Link>
         </li>
         <li>
-          <Link href="/notes/mboh">
+          <Link href="notes/mboh">
             <a>Crud2</a>
           </Link>
         </li>
         <li>
-          <Link href="/notes/Crud2">
+          <Link href="notes/Crud2">
             <a>Crud3</a>
           </Link>
         </li>
         <li>
-          <Link href="/notes/Weather">
+          <Link href="notes/Weather">
             <a>Weather</a>
           </Link>
         </li>

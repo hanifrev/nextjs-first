@@ -118,7 +118,9 @@ const Page = () => {
       </div>
       <div>
         <div>i will endure hide away</div>
-        <div>the id : {id} </div>
+        <div>
+          <h2>the id : {id}</h2>{" "}
+        </div>
         <Accordion panels={panels} />
       </div>
     </div>

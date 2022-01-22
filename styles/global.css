@@ -152,10 +152,10 @@ a {
   flex-direction: column;
 }
 
-.sideapp {
+/* .sideapp {
   width: 2rem;
   height: 100vh;
-}
+} */
 
 .sidebar {
   margin-top: -1rem;

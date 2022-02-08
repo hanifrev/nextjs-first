@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import ReactDOM from "react-dom";
 // import { useRouter } from "next/dist/next-server/server/router";
 import SideMenu from "./SideMenu";
 
 const Page = () => {
+  const [person, setPerson] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(
+        "https://randomuser.me/api/?page=1&results=20&seed=abc"
+      );
+      const data = await res.json();
+      setPerson(data.results);
+      console.log(data.results);
+    };
+    fetchData();
+  }, []);
+
   const Router = useRouter();
   const { id } = Router.query;
 
@@ -122,6 +135,37 @@ const Page = () => {
           <h2>the id : {id}</h2>{" "}
         </div>
         <Accordion panels={panels} />
+      </div>
+      <div>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Nationality</th>
+          </thead>
+          <tbody>
+            {person.map((x, id) => {
+              return (
+                <tr key={id}>
+                  <td>{x.name.first}</td>
+                  <td>{x.email}</td>
+                  <td>{x.gender}</td>
+                  <td>
+                    {x.location.city}, {x.location.state}, {x.location.country}.
+                  </td>
+                  <td>
+                    <img
+                      src={`https://flagcdn.com/16x12/${x.nat.toLowerCase()}.png`}
+                      alt=""
+                    />
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );

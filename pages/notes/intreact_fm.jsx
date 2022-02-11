@@ -6,30 +6,30 @@ import EffectEx from "../../src/component/EffectEx";
 import ImageState from "../../src/component/ImageState";
 import Football from "../../src/component/Football";
 import ToogleTest from "../../src/component/ToogleTest";
-import Head from 'next/head'
+import Head from "next/head";
 import Modal from "../../src/component/Modal";
+import HTMLAccordion from "../../src/component/HTMLAccordion";
 
 const IntReact = () => {
-
   const country = [
     {
-      name: 'Germany',
-      capital: 'Berlin',
-      continent: 'Europe',
-      objectID: 0
+      name: "Germany",
+      capital: "Berlin",
+      continent: "Europe",
+      objectID: 0,
     },
     {
-      name: 'Russia',
-      capital: 'Moscow',
-      continent: 'Europe/Asia',
-      objectID: 0
-    }
-  ]
+      name: "Russia",
+      capital: "Moscow",
+      continent: "Europe/Asia",
+      objectID: 0,
+    },
+  ];
 
   const [theState, setTheState] = useState();
   const [counter, setCounter] = useState(0);
   const [imgX, setImgX] = useState(true);
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
   const alertTest = () => {
     // alert("wewewwewe");
@@ -44,20 +44,18 @@ const IntReact = () => {
     setCounter(counter * 0);
   };
 
-
-
-  useEffect(()=> {
+  useEffect(() => {
     const interval = setInterval(() => {
-      setImgX(!imgX)
-    }, 1000)
-    return () => clearInterval(interval)
-  }, [imgX])
+      setImgX(!imgX);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [imgX]);
 
   const [searchT, setSearchT] = useState("");
 
-  const handleChange = e => {
-    setSearchT(e.target.value)
-  }
+  const handleChange = (e) => {
+    setSearchT(e.target.value);
+  };
 
   return (
     <div>
@@ -76,6 +74,9 @@ const IntReact = () => {
       <EffectEx />
       <hr />
       <ImageState />
+      <hr />
+      <HTMLAccordion />
+      <hr />
       test
       <StateExample />
       <hr />
@@ -95,23 +96,30 @@ const IntReact = () => {
         <h3>Output: {searchT}</h3>
       </div>
       <Football />
-      <img style={{
-        paddingTop: "5rem",
-        width: "30%"
-      }} alt='' src={imgX ? 'https://i.imgur.com/54nCqZJ.jpg' : 'https://i.imgur.com/QPhQ2Su.jpg'} />
+      <img
+        style={{
+          paddingTop: "5rem",
+          width: "30%",
+        }}
+        alt=""
+        src={
+          imgX
+            ? "https://i.imgur.com/54nCqZJ.jpg"
+            : "https://i.imgur.com/QPhQ2Su.jpg"
+        }
+      />
     </div>
   );
 
-      // const List = props =>
-      //   props.list.map(item => (
-      //     <div key={item.objectID}>
-      //       <span>{item.name}</span>
-      //       <span>{item.capital}</span>
-      //       <span>{item.continent}</span>
-      //     </div>
+  // const List = props =>
+  //   props.list.map(item => (
+  //     <div key={item.objectID}>
+  //       <span>{item.name}</span>
+  //       <span>{item.capital}</span>
+  //       <span>{item.continent}</span>
+  //     </div>
 
-      //   ))
-
+  //   ))
 };
 
 export default IntReact;

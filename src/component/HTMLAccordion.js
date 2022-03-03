@@ -14,17 +14,27 @@ const HTMLAccordion = () => {
     <div>
       <details style={styles}>
         <summary>html accordion</summary>
-        <p style={content}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-        </p>
+        <div style={content}>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+          </p>
+          <ul>
+            <li>repsol honda</li>
+            <li>yamaha factory</li>
+            <li>yamaha tech 3</li>
+            <li>aprilia</li>
+          </ul>
+        </div>
       </details>
       <details style={styles}>
         <summary>burn the winter landmark</summary>
-        <p style={content}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-        </p>
+        <div style={content}>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+          </p>
+        </div>
       </details>
     </div>
   );

@@ -3,14 +3,25 @@ import data from "./MOCK_DATA.json";
 
 const Search = () => {
   const [searchTerm, setSeacrhTerm] = useState("");
+  const styles = {
+    background: "#9daf9a",
+    width: "300px",
+    borderRadius: "20px",
+    paddingLeft: "1rem",
+  };
+  const inputStyle = {
+    padding: "10px",
+  };
+
   return (
     <div>
       <input
         type="text"
-        placeholder="enter the name"
+        placeholder="enter the name ..."
         onChange={(e) => {
           setSeacrhTerm(e.target.value);
         }}
+        style={inputStyle}
       />
       {data
         .filter((val) => {
@@ -24,8 +35,9 @@ const Search = () => {
         })
         .map((x, key) => {
           return (
-            <div key={key}>
+            <div key={key} style={styles}>
               <p>{x.first_name}</p>
+              <p>Email: {x.email}</p>
             </div>
           );
         })}

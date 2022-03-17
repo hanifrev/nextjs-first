@@ -86,6 +86,16 @@ const Pages = () => {
             <a>Weather</a>
           </Link>
         </li>
+        <li>
+          <Link href="notes/Paginate">
+            <a>Page</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="notes/Search">
+            <a>Search</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

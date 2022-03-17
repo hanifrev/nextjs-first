@@ -10,6 +10,7 @@
     "body-parser": "^1.19.0",
     "dotenv-load": "^2.0.0",
     "install": "^0.13.0",
+    "libnpmaccess": "^6.0.1",
     "next": "^9.5.5",
     "next-connect": "^0.8.1",
     "next-env": "^1.1.1",

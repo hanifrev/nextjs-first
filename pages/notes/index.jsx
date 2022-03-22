@@ -96,6 +96,16 @@ const Pages = () => {
             <a>Search</a>
           </Link>
         </li>
+        <li>
+          <Link href="notes/Search2">
+            <a>Search 2</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="notes/TabsCategory">
+            <a>Tabs Category</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

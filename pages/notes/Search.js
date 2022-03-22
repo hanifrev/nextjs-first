@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import data from "./MOCK_DATA.json";
+import data from "./MOCK_DATA";
 
 const Search = () => {
   const [searchTerm, setSeacrhTerm] = useState("");
   const [gen, setGen] = useState("");
+  const [theData, setTheData] = useState(data);
 
   const styles = {
     background: "#9daf9a",
@@ -15,8 +16,17 @@ const Search = () => {
     padding: "10px",
   };
 
-  const gender = [...new Set(data.map((x) => x.gender))];
+  const gender = ["all", ...new Set(data.map((x) => x.gender))];
   //   console.log(gender);
+  const filterCategory = (x) => {
+    if (x == "all") {
+      setTheData(data);
+    }
+    const filteredData = data.filter((x) => {
+      return x.gender == x;
+    });
+    setTheData(filteredData);
+  };
 
   return (
     <div>
@@ -38,6 +48,15 @@ const Search = () => {
           })}
         </select>
       </div>
+      <div>
+        {gender.map((x, index) => {
+          return (
+            <button type="button" key={index} onClick={() => setGen(x)}>
+              {x}
+            </button>
+          );
+        })}
+      </div>
 
       {/* filter by gender */}
       {data
@@ -45,6 +64,8 @@ const Search = () => {
           if (gen == "") {
             return val;
           } else if (val.gender === gen) {
+            return val;
+          } else if (gen == "all") {
             return val;
           }
           //   return val.gender === gen;

@@ -92,8 +92,6 @@ const Search2 = () => {
           .filter((x) => {
             if (product == x.category) {
               return x;
-            } else if (x.category == "") {
-              return x;
             }
           })
           //   .filter((x) => {

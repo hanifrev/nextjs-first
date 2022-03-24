@@ -1,4 +1,4 @@
-const { useState, useEffect } = React;
+import React, { useState } from "react";
 
 function CheckboxExample() {
   const id = "department";

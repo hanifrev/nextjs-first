@@ -53,7 +53,7 @@ const Pages = () => {
         </li>
         <li>
           <Link href="notes/fetch2">
-            <a>Fetch2</a>
+            <a>Quran</a>
           </Link>
         </li>
         <li>

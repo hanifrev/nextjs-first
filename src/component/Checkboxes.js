@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { handleToggle } from "../../src/utils/utils";
+import { handleToggle } from "../utils/utils";
 
 const Checkboxes = ({ list, handleFilters }) => {
   const [checkedArray, setCheckedArray] = useState([]);

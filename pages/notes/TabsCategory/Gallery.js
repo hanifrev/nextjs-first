@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Data from "./data.json";
-import Tabs from "./Tabs";
-import Items from "./Items";
+import Tabs from "../../../src/component/TabsCategory/Tabs";
+import Items from "../../../src/component/TabsCategory/Items";
 
 const Gallery = () => {
   const [data, setData] = useState(Data);

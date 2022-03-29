@@ -106,6 +106,11 @@ const Pages = () => {
             <a>Tabs Category</a>
           </Link>
         </li>
+        <li>
+          <Link href="/CheckboxFilter">
+            <a>Checkbox Filter</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

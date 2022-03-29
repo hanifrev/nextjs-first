@@ -47,7 +47,7 @@ const Test = () => {
           </section>
         )}
       </Dropzone> */}
-      <section className="container">
+      {/* <section className="container">
         <div {...getRootProps({ className: "dropzone" })}>
           <input {...getInputProps()} />
 
@@ -57,7 +57,7 @@ const Test = () => {
           <h4>Files</h4>
           <ul>{files}</ul>
         </aside>
-      </section>
+      </section> */}
     </div>
   );
 };

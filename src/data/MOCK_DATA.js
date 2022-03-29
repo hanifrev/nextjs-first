@@ -1,4 +1,4 @@
-const MOCK_DATA = [
+[
   {
     id: 1,
     first_name: "Louis",
@@ -7000,4 +7000,3 @@ const MOCK_DATA = [
     gender: "Agender",
   },
 ];
-export default MOCK_DATA;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import data from "./data/MOCK_DATA";
+import data from "./MOCK_DATA.json";
 
 const Search = () => {
   const [searchTerm, setSeacrhTerm] = useState("");

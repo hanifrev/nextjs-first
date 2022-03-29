@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Checkboxes from "./Checkboxes";
-import { data, listDepartment, listJobsType } from "./data";
+import { data, listDepartment, listJobsType } from "../../src/data/data";
 
 const App = () => {
   const [jobs, setJobs] = useState(data);

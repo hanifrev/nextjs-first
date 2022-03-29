@@ -36,7 +36,7 @@ export const listDepartment = [
     id: 0,
     name: "department",
     label: "All",
-    value: "All",
+    value: 0,
   },
   {
     id: 1,
@@ -56,18 +56,6 @@ export const listDepartment = [
     label: "Marketing & Design",
     value: "Marketing & Design",
   },
-  //   {
-  //     id: 4,
-  //     name: "rating4",
-  //     label: "Rating 4",
-  //     value: 4,
-  //   },
-  //   {
-  //     id: 5,
-  //     name: "rating5",
-  //     label: "Rating 5",
-  //     value: 5,
-  //   },
 ];
 
 export const listJobsType = [

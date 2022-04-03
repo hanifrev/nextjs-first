@@ -33,21 +33,16 @@ const Share = () => {
     <div>
       <div>share test</div>
       <div>
-        <FacebookShareButton
-          url={theURL}
-          quote={"フェイスブックはタイトルが付けれるようです"}
-          hashtag={"#hashtag"}
-          description={"aiueo"}
-        >
+        <FacebookShareButton url={theURL}>
           <FaFacebookSquare style={iconStyles} />
         </FacebookShareButton>
-        <TwitterShareButton>
+        <TwitterShareButton url={theURL}>
           <FaTwitter style={iconStyles} />
         </TwitterShareButton>
-        <LinkedinShareButton>
+        <LinkedinShareButton url={theURL}>
           <FaLinkedin style={iconStyles} />
         </LinkedinShareButton>
-        <EmailShareButton>
+        <EmailShareButton url={theURL}>
           <AiOutlineMail style={iconStyles} />
         </EmailShareButton>
       </div>

@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 import {
   EmailShareButton,
   FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
-} from "react-share";
-
-import {
-  EmailIcon,
-  FacebookIcon,
-  LinkedinIcon,
-  TwitterIcon,
 } from "react-share";
 
 import { FaFacebookSquare, FaTwitter, FaLinkedin } from "react-icons/fa";

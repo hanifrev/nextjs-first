@@ -35,7 +35,11 @@ export async function getStaticPaths() {
   ).then((r) => r.json());
   return {
     paths: characters.map((x) => {
-      const characterId = x.name.toLowerCase().replace(/ /g, "-");
+      const characterId = x.name
+        .toLowerCase()
+        .replace(/ /g, "-")
+        .replace(/\'/, "")
+        .replace(/\(.+\)/, "");
       return {
         params: {
           characterId,

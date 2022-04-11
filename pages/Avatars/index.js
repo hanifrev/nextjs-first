@@ -25,10 +25,10 @@ export default index;
 
 export async function getStaticProps() {
   const avatars = await fetch(
-    "https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=500"
+    "https://last-airbender-api.herokuapp.com/api/v1/characters/avatar"
   ).then((r) => r.json());
 
-  console.log(avatars);
+  // console.log(avatars);
 
   return {
     props: {

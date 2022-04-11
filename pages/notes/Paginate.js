@@ -75,8 +75,8 @@ function App() {
       {/* {data} */}
       {currentPageData}
       <ReactPaginate
-        previousLabel={"<"}
-        nextLabel={">"}
+        previousLabel={" "}
+        nextLabel={" "}
         previousClassName={"prev"}
         breakLabel={"..."}
         breakClassName={"break-me"}

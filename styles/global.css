@@ -208,8 +208,14 @@ a {
 .pagination > .prev > a {
   border: 0;
 }
+.pagination > .prev > a::after {
+  content: "X";
+}
 .pagination > .next > a {
   border: 0;
+}
+.pagination > .next > a::after {
+  content: "X";
 }
 .pagination > .active > a {
   background: linear-gradient(270deg, #ee2c4a 0%, #c54a81 100%);
@@ -238,12 +244,14 @@ a {
   border-radius: 50%;
   font-size: 12px;
   padding: 8px 12px;
+  font-weight: 700;
 }
 .pagination > li > a,
 .pagination > li > span {
   color: #fff;
   font-size: 12px;
   padding: 8px 12px;
+  font-weight: 700;
 }
 .pagination > li:first-child > a,
 .pagination > li:first-child > span,

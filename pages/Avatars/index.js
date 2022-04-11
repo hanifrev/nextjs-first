@@ -1,10 +1,21 @@
 import React from "react";
+import Link from "next/link";
 
 const index = ({ avatars }) => {
   return (
     <div>
       {avatars.map((x) => {
-        return <h3>{x.name}</h3>;
+        return (
+          <Link
+            href={`Avatars/characters/${x.name
+              .toLowerCase()
+              .replace(/ /g, "-")}`}
+          >
+            <a>
+              <h3 style={{ color: "#000" }}>{x.name}</h3>
+            </a>
+          </Link>
+        );
       })}
     </div>
   );
@@ -14,7 +25,7 @@ export default index;
 
 export async function getStaticProps() {
   const avatars = await fetch(
-    "https://last-airbender-api.herokuapp.com/api/v1/characters/avatar"
+    "https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=500"
   ).then((r) => r.json());
 
   console.log(avatars);

@@ -111,6 +111,11 @@ const Pages = () => {
             <a>Checkbox Filter</a>
           </Link>
         </li>
+        <li>
+          <Link href="/Avatars">
+            <a>Avatars</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

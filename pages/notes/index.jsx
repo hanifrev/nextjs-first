@@ -112,8 +112,13 @@ const Pages = () => {
           </Link>
         </li>
         <li>
-          <Link href="/Avatars">
-            <a>Avatars</a>
+          <Link href="/fakeUsers">
+            <a>Fake Users</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/fakeBlog">
+            <a>Fake Blog</a>
           </Link>
         </li>
       </ul>

@@ -121,6 +121,11 @@ const Pages = () => {
             <a>Fake Blog</a>
           </Link>
         </li>
+        <li>
+          <Link href="notes/TabsSection">
+            <a>TabsSection</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

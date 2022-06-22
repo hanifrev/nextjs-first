@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 const Page = () => {
   return (
@@ -13,6 +14,26 @@ const Page = () => {
         height: "100vh",
       }}
     >
+      <Head>
+        <meta property="og:site_name" content="Code Playground" />
+        <meta property="og:title" content="The Playground" />
+        <meta
+          property="og:description"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        />
+        <meta
+          property="og:image"
+          itemprop="image"
+          content="https://www.spirit-of-metal.com/les%20goupes/O/Opeth/pics/359786_logo.jpg"
+        />
+        <link
+          itemprop="thumbnailUrl"
+          href="https://www.spirit-of-metal.com/les%20goupes/O/Opeth/pics/359786_logo.jpg"
+        />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:updated_time" content="updatedtime" />
+        <meta property="og:locale" content="en_GB" />
+      </Head>
       <h2>W E L C O M E</h2>
       <h3>
         This is Hanifrev's code playground, in this repo I mess around with code

@@ -230,6 +230,11 @@ a {
   outline: none;
   cursor: pointer;
   border-radius: 50%;
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  text-align: center;
+  padding-top: 16px;
 }
 .pagination > .active > a,
 .pagination > .active > span,

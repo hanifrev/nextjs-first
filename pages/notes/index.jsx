@@ -1,7 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Pages = () => {
+  const router = useRouter();
+  console.log(router);
+  console.log(router.pathname);
+  console.log(router.query);
   return (
     <div>
       <div>The Lotus Eater</div>

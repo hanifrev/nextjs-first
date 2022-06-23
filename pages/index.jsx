@@ -1,8 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Page = () => {
+  const router = useRouter();
+  console.log(router);
+  console.log(router.pathname);
+  console.log(router.query);
   return (
     <div
       style={{

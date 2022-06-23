@@ -1,14 +1,36 @@
 import React from "react";
 import Link from "next/link";
+// import absoluteUrl from "next-absolute-url";
 import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import Head from "next/head";
 
 const Pages = () => {
+  // const { origin } = absoluteUrl(req);
+  // const apiURL = `${origin}/api/job.js`;
+  // console.log(apiURL);
+
   const router = useRouter();
-  console.log(router);
-  console.log(router.pathname);
-  console.log(router.query);
+  const [ogUrl, setOgUrl] = useState("");
+
+  // console.log(router);
+  // console.log(router.pathname);
+  // console.log(router.query);
+
+  useEffect(() => {
+    const host = window.location.host;
+    const baseUrl = `https://${host}`;
+
+    setOgUrl(`${baseUrl}${router.pathname}`);
+  }, [router.pathname]);
+
+  console.log(ogUrl);
+
   return (
     <div>
+      <Head>
+        <meta property="og:url" content={ogUrl} />
+      </Head>
       <div>The Lotus Eater</div>
       <ul>
         <li>

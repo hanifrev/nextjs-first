@@ -59,6 +59,10 @@ const Pages = ({ theData }) => {
           itemProp="image"
           content="https://www.spirit-of-metal.com/les%20goupes/O/Opeth/pics/359786_logo.jpg"
         />
+        <link
+          itemprop="thumbnailUrl"
+          href="https://www.spirit-of-metal.com/les%20goupes/O/Opeth/pics/359786_logo.jpg"
+        />
       </Head>
       <div>The Lotus Eater</div>
       <ul>

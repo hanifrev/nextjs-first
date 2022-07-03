@@ -54,6 +54,11 @@ const Pages = ({ theData }) => {
           property="og:description"
           content={(theData.SEO && theData.SEO.metaDescription) || ""}
         />
+        <meta
+          property="og:image"
+          itemProp="image"
+          content="https://www.spirit-of-metal.com/les%20goupes/O/Opeth/pics/359786_logo.jpg"
+        />
       </Head>
       <div>The Lotus Eater</div>
       <ul>

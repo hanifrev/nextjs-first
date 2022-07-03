@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import axios from "axios";
 
 const Pages = () => {
   // const { origin } = absoluteUrl(req);
@@ -16,6 +17,20 @@ const Pages = () => {
   // console.log(router);
   // console.log(router.pathname);
   // console.log(router.query);
+
+  const [data, setData] = useState({});
+  const getData = async () => {
+    const response = await axios.get(`https://cms.roketin.com/homepage`);
+    if (response.status === 200) {
+      setData(response.data);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  console.log(data);
 
   useEffect(() => {
     const host = window.location.host;
@@ -30,6 +45,14 @@ const Pages = () => {
     <div>
       <Head>
         <meta property="og:url" content={ogUrl} />
+        <meta
+          property="og:title"
+          content={(data.SEO && data.SEO.metaTitle) || ""}
+        />
+        <meta
+          property="og:description"
+          content={(data.SEO && data.SEO.metaDescription) || ""}
+        />
       </Head>
       <div>The Lotus Eater</div>
       <ul>

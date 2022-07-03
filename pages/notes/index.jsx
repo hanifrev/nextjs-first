@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import axios from "axios";
 
-const Pages = () => {
+const Pages = ({ theData }) => {
   // const { origin } = absoluteUrl(req);
   // const apiURL = `${origin}/api/job.js`;
   // console.log(apiURL);
@@ -30,7 +30,8 @@ const Pages = () => {
     getData();
   }, []);
 
-  console.log(data);
+  // console.log(data);
+  // console.log(theData);
 
   useEffect(() => {
     const host = window.location.host;
@@ -47,11 +48,11 @@ const Pages = () => {
         <meta property="og:url" content={ogUrl} />
         <meta
           property="og:title"
-          content={(data.SEO && data.SEO.metaTitle) || ""}
+          content={(theData.SEO && theData.SEO.metaTitle) || ""}
         />
         <meta
           property="og:description"
-          content={(data.SEO && data.SEO.metaDescription) || ""}
+          content={(theData.SEO && theData.SEO.metaDescription) || ""}
         />
       </Head>
       <div>The Lotus Eater</div>
@@ -182,3 +183,10 @@ const Pages = () => {
 };
 
 export default Pages;
+
+export async function getServerSideProps() {
+  const res = await fetch(`https://cms.roketin.com/homepage`);
+  const theData = await res.json();
+
+  return { props: { theData } };
+}

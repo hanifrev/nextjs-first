@@ -186,6 +186,11 @@ const Pages = ({ theData }) => {
             <a>TabsSection</a>
           </Link>
         </li>
+        <li>
+          <Link href="notes/formtest">
+            <a>Form Test</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

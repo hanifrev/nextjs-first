@@ -8,7 +8,7 @@ const formtest = () => {
   };
   return (
     <div>
-      <video id="bg-video" autoPlay loop muted playsInline>
+      <video id="bg-video" autoPlay loop muted playsInline controls>
         {/* <source
           src="https://cms.roketin.com/uploads/homepage_ece3c2c3c4.webm"
           type="video/webm"

@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import gsap from "gsap";
+import React, { useState, useRef, useEffect } from "react";
 import data from "./TabsSection.json";
 
 const TabsSection = () => {
   const [active, setActive] = useState(0);
 
+  const theRef = useRef();
+  const x = gsap.utils.selector(theRef);
+
+  useEffect(() => {
+    gsap.from(x(".cont"), { y: 200, duration: 1, ease: "bounce.out" });
+  });
+
   const container = {
     display: "flex",
     flexDirection: "column",
+    overflowX: "hidden",
   };
 
   const fontColor = {
@@ -18,7 +27,7 @@ const TabsSection = () => {
     },
   };
   return (
-    <div style={{ container }}>
+    <div style={{ container }} ref={theRef}>
       <div>
         {data.map((item, index) => {
           return (
@@ -36,7 +45,7 @@ const TabsSection = () => {
           );
         })}
       </div>
-      <div>
+      <div className="cont">
         <div>{data[active].title}</div>
         <div>{data[active].description}</div>
         <div>

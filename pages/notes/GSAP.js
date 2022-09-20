@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 // const ScrollTrigger = dynamic(() => import("gsap/ScrollTrigger"), {
 //   ssr: false,
@@ -21,7 +22,7 @@ const GSAP = () => {
     let test1 = document.querySelector(".test1");
     let test2 = document.querySelector(".test2");
     gsap.to(q(".box"), { x: 100 });
-    gsap.from(q(".fromTest"), { x: 140, y: 10 });
+    gsap.from(q(".fromTest"), { x: 140, y: 100, duration: 2 });
     gsap.fromTo(q(".fromToTest"), { x: 100 }, { x: 250 });
     gsap.from([(test1, test2)], { x: 200, duration: 4 });
     gsap.to(q(".moveBox"), {
@@ -36,6 +37,7 @@ const GSAP = () => {
         start: "top bottom",
         toggleActions: "play none none reverse",
       },
+      stagger: 0.3,
       x: 200,
       duration: 2,
     });
@@ -46,17 +48,17 @@ const GSAP = () => {
         start: "top bottom",
         toggleActions: "play none none reverse",
       },
-      x: 200,
+      y: 200,
       duration: 2,
     });
   }, []);
 
   const titles = {
-    height: "15rem",
+    height: "5rem",
   };
 
   const container = {
-    overflowX: "hidden",
+    overflow: "hidden",
   };
 
   const movingBox = {
@@ -69,16 +71,21 @@ const GSAP = () => {
 
   return (
     <div ref={boxRef} style={container}>
-      <div className="box">Hello</div>
+      <div>
+        <Link href="/notes">
+          <h3 style={{ cursor: "pointer", width: "90px" }}>{"<- "}BACK</h3>
+        </Link>
+      </div>
+      <div className="box">Aufbruch</div>
       <div className="box">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
+          Ich weiß nicht, warum ich das tue. Es ist fast ein innerer Zwang, der
+          mich dazu treibt. Vielleicht führte ich wenn ich anders könnte, würde
+          ich langsam aufhören ein Mensch zu sein, und würde bald schmutzig und
+          stinkend umhier kriechen und unverständliche Laute aufstoßen. Nicht,
+          dass ich führtete ein Tier zu werden. Das wäre nicht sehr schlimm.
+          Aber ein Mensch kann niemals ein Tier werden. Er stützt ein Tier vor
+          über in einem abkommt.
         </p>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -133,9 +140,20 @@ const GSAP = () => {
       </div>
       <div className="test1">
         <h1>Dirge For November</h1>
+        <p style={{ width: "500px", color: "white" }}>
+          The omen showed, took me away Preparations are done, this can't last
+          The mere reflection brought disgust No ordeal to conquer, this firm
+          slit It sheds upon the floor, dripping into a pool Grant me sleep,
+          take me under Like the wings of a dove, folding around I fade into
+          this tender care
+        </p>
       </div>
       <div className="test2">
         <h1>Pattern in The Ivy</h1>
+        <p>
+          One moonlit shadow on the wall Disrupted in its own creation Veiled in
+          the darkness of this fall Is this the end - manifestation
+        </p>
       </div>
       <div className="scrl" style={titles}>
         <h1>As The Palaces Burn</h1>
@@ -143,8 +161,32 @@ const GSAP = () => {
       <div className="scrl" style={titles}>
         <h1>Blacken The Cursed Sun</h1>
       </div>
-      <div className="yntkts" style={titles}>
+      <div className="scrl">
+        <h1>Hjärtat vet vad handen gör</h1>
+        <p style={{ width: "500px", color: "white" }}>
+          Krig i en utopi Döda den som slår sig fri från symmetri Parodin blev
+          allvar Och vi köper tid Folket tappar mark men vi älskar monarkin
+          Döden är en saga i ett land köpt på kredit Vågen svart som silver
+          tyngd av jakten på dopamin
+        </p>
+      </div>
+      <div className="yntkts">
         <h1>Reign in Blood</h1>
+        <p style={{ width: "500px", color: "white" }}>
+          Sadistic, surgeon of demise Sadist of the noblest blood Destroying
+          without mercy To benefit the Aryan race, Surgery with no anesthesia
+          Feel the knife pierce you intensely Inferior, no use to mankind
+          Strapped down, screaming out to die
+        </p>
+      </div>
+      <div>
+        <h1>Vergängnis</h1>
+        <p style={{ width: "500px", color: "white" }}>
+          Er verlässt das Meer aus Wehmut Angstvoll richtet sich sein Blick gen
+          Himmel Leer blickt auf ihn die Welt Ein tiefes Raunen durchfährt den
+          Ort An dem er so lange Jahre ausgeharrt Dies ist ein Abschied für
+          immer Die Vernunft begraben für immer
+        </p>
       </div>
     </div>
   );

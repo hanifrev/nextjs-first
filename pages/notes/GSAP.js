@@ -1,7 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import dynamic from "next/dynamic";
+
+// const ScrollTrigger = dynamic(() => import("gsap/ScrollTrigger"), {
+//   ssr: false,
+// });
 
 const GSAP = () => {
+  gsap.registerPlugin(ScrollTrigger);
   const boxRef = useRef();
 
   //   useEffect(() => {
@@ -21,6 +28,26 @@ const GSAP = () => {
       duration: 2,
       x: 200,
       rotation: 360,
+    });
+    gsap.to(q(".scrl"), {
+      scrollTrigger: {
+        id: 1,
+        trigger: ".scrl",
+        start: "top bottom",
+        toggleActions: "play none none reverse",
+      },
+      x: 200,
+      duration: 2,
+    });
+    gsap.from(q(".yntkts"), {
+      scrollTrigger: {
+        id: 1,
+        trigger: ".yntkts",
+        start: "top bottom",
+        toggleActions: "play none none reverse",
+      },
+      x: 200,
+      duration: 2,
     });
   }, []);
 
@@ -110,13 +137,13 @@ const GSAP = () => {
       <div className="test2">
         <h1>Pattern in The Ivy</h1>
       </div>
-      <div className="box" style={titles}>
+      <div className="scrl" style={titles}>
         <h1>As The Palaces Burn</h1>
       </div>
-      <div className="box" style={titles}>
+      <div className="scrl" style={titles}>
         <h1>Blacken The Cursed Sun</h1>
       </div>
-      <div className="box" style={titles}>
+      <div className="yntkts" style={titles}>
         <h1>Reign in Blood</h1>
       </div>
     </div>

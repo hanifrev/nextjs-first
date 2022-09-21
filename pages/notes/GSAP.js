@@ -1,22 +1,28 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import data from "./TabsSection.json";
 
 // const ScrollTrigger = dynamic(() => import("gsap/ScrollTrigger"), {
 //   ssr: false,
 // });
 
 const GSAP = () => {
+  const [active, setActive] = useState(0);
+
   gsap.registerPlugin(ScrollTrigger);
+
   const boxRef = useRef();
+  const bounceRef = useRef();
 
   //   useEffect(() => {
   //     gsap.to(boxRef.current, { rotation: "+=360" });
   //   });
 
   const q = gsap.utils.selector(boxRef);
+  const x = gsap.utils.selector(bounceRef);
 
   useEffect(() => {
     let test1 = document.querySelector(".test1");
@@ -30,6 +36,7 @@ const GSAP = () => {
       x: 200,
       rotation: 360,
     });
+
     gsap.to(q(".scrl"), {
       scrollTrigger: {
         id: 1,
@@ -41,6 +48,7 @@ const GSAP = () => {
       x: 200,
       duration: 2,
     });
+
     gsap.from(q(".yntkts"), {
       scrollTrigger: {
         id: 1,
@@ -52,6 +60,10 @@ const GSAP = () => {
       duration: 2,
     });
   }, []);
+
+  useEffect(() => {
+    gsap.from(x(".cont"), { y: 200, duration: 1, ease: "bounce.out" });
+  });
 
   const titles = {
     height: "5rem",
@@ -67,6 +79,15 @@ const GSAP = () => {
     height: "100px",
     border: "1px solid",
     background: "yellowgreen",
+  };
+
+  const fontColor = {
+    active: {
+      color: "red",
+    },
+    inactive: {
+      color: "black",
+    },
   };
 
   return (
@@ -187,6 +208,35 @@ const GSAP = () => {
           Ort An dem er so lange Jahre ausgeharrt Dies ist ein Abschied für
           immer Die Vernunft begraben für immer
         </p>
+      </div>
+
+      <div ref={bounceRef}>
+        <div style={{ display: "flex" }}>
+          {data.map((item, index) => {
+            return (
+              <div
+                key={index}
+                style={active === index ? fontColor.active : fontColor.inactive}
+                onClick={() => setActive(index)}
+              >
+                <button
+                  style={
+                    active === index ? fontColor.active : fontColor.inactive
+                  }
+                >
+                  {item.title}
+                </button>
+              </div>
+            );
+          })}
+        </div>
+        <div className="cont">
+          <div>{data[active].title}</div>
+          <div>{data[active].description}</div>
+          <div>
+            <img src={data[active].images} />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import data from "./TabsSection.json";
+import data from "./TabsGasp.json";
 
 // const ScrollTrigger = dynamic(() => import("gsap/ScrollTrigger"), {
 //   ssr: false,
@@ -23,11 +23,12 @@ const GSAP = () => {
 
   const q = gsap.utils.selector(boxRef);
   const x = gsap.utils.selector(bounceRef);
+  // const boxes = gsap.utils.toArray(".scrl");
 
   useEffect(() => {
     let test1 = document.querySelector(".test1");
     let test2 = document.querySelector(".test2");
-    gsap.to(q(".box"), { x: 100 });
+    gsap.to(q(".box"), { x: 100, duration: 3 });
     gsap.from(q(".fromTest"), { x: 140, y: 100, duration: 2 });
     gsap.fromTo(q(".fromToTest"), { x: 100 }, { x: 250 });
     gsap.from([(test1, test2)], { x: 200, duration: 4 });
@@ -37,17 +38,37 @@ const GSAP = () => {
       rotation: 360,
     });
 
-    gsap.to(q(".scrl"), {
-      scrollTrigger: {
-        id: 1,
-        trigger: ".scrl",
-        start: "top bottom",
-        toggleActions: "play none none reverse",
+    // boxes.forEach(box => {
+    //   gsap.to(box, {
+    //     x: 200,
+    //     scrollTrigger: {
+    //       id: 1,
+    //     trigger: "box",
+    //     start: "top bottom",
+    //     toggleActions: "play none none reverse",
+    //     }
+    //   })
+    // })
+
+    gsap.fromTo(
+      q(".scrl"),
+      {
+        x: 100,
+        opacity: 0,
       },
-      stagger: 0.3,
-      x: 200,
-      duration: 2,
-    });
+      {
+        stagger: 0.3,
+        x: 500,
+        duration: 3,
+        opacity: 1,
+        scrollTrigger: {
+          id: 1,
+          trigger: ".scrl",
+          start: "top bottom",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
 
     gsap.from(q(".yntkts"), {
       scrollTrigger: {
@@ -56,8 +77,10 @@ const GSAP = () => {
         start: "top bottom",
         toggleActions: "play none none reverse",
       },
+      stagger: 0.2,
       y: 200,
       duration: 2,
+      opacity: 0,
     });
   }, []);
 
@@ -200,7 +223,7 @@ const GSAP = () => {
           Strapped down, screaming out to die
         </p>
       </div>
-      <div>
+      <div className="yntkts">
         <h1>Vergängnis</h1>
         <p style={{ width: "500px", color: "white" }}>
           Er verlässt das Meer aus Wehmut Angstvoll richtet sich sein Blick gen

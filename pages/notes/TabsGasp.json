@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Orchid",
+    "description": "Orchid is the debut studio album by Swedish progressive metal band Opeth",
+    "images": "https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Opeth_Orchid.jpg/220px-Opeth_Orchid.jpg"
+  },
+  {
+    "title": "Morningrise",
+    "description": "Morningrise showcases Opeth's signature style, exploring the dynamics between the combination of black metal and death metal vocals, and guitar parts with lighter progressive and acoustic elements.",
+    "images": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b3/Opeth_Morningrise.jpg/220px-Opeth_Morningrise.jpg"
+  },
+  {
+    "title": "My Arms, Your Hearse",
+    "description": "It was the band's first album to be released simultaneously in Europe, through Candlelight Records, and in the United States, through Century Black.",
+    "images": "https://upload.wikimedia.org/wikipedia/en/e/e1/Opeth_MAYH.jpg"
+  },
+  {
+    "title": "Blackwater Park",
+    "description": "Although Blackwater Park did not chart in North America or the United Kingdom, it was a commercial breakthrough for the band and is often considered their magnum opus.",
+    "images": "https://upload.wikimedia.org/wikipedia/en/4/45/Blackwaterpark.jpg"
+  },
+  {
+    "title": "Ghost Reveries",
+    "description": "The album marks a temporary return to the progressive metal styles of the previous albums and features death growls, though still includes some of the progressive rock elements of Damnation.",
+    "images": "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Ghost_Reveries_%28Opeth%29_album_cover.jpg/220px-Ghost_Reveries_%28Opeth%29_album_cover.jpg"
+  }
+]

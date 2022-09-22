@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import dynamic from "next/dynamic";
@@ -25,6 +25,25 @@ const GSAP = () => {
   const x = gsap.utils.selector(bounceRef);
   // const boxes = gsap.utils.toArray(".scrl");
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      const boxes = self.selector(".scrl");
+      boxes.forEach((box) => {
+        gsap.to(box, {
+          x: 300,
+          duration: 3,
+          scrollTrigger: {
+            id: 1,
+            trigger: box,
+            start: "top bottom",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
+    }, boxRef);
+    return () => ctx.revert();
+  }, []);
+
   useEffect(() => {
     let test1 = document.querySelector(".test1");
     let test2 = document.querySelector(".test2");
@@ -50,25 +69,25 @@ const GSAP = () => {
     //   })
     // })
 
-    gsap.fromTo(
-      q(".scrl"),
-      {
-        x: 100,
-        opacity: 0,
-      },
-      {
-        stagger: 0.3,
-        x: 500,
-        duration: 3,
-        opacity: 1,
-        scrollTrigger: {
-          id: 1,
-          trigger: ".scrl",
-          start: "top bottom",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   q(".scrl"),
+    //   {
+    //     x: 100,
+    //     opacity: 0,
+    //   },
+    //   {
+    //     stagger: 0.3,
+    //     x: 500,
+    //     duration: 3,
+    //     opacity: 1,
+    //     scrollTrigger: {
+    //       id: 1,
+    //       trigger: ".scrl",
+    //       start: "top bottom",
+    //       toggleActions: "play none none reverse",
+    //     },
+    //   }
+    // );
 
     gsap.from(q(".yntkts"), {
       scrollTrigger: {
@@ -89,7 +108,7 @@ const GSAP = () => {
   });
 
   const titles = {
-    height: "5rem",
+    height: "12rem",
   };
 
   const container = {
@@ -201,9 +220,22 @@ const GSAP = () => {
       </div>
       <div className="scrl" style={titles}>
         <h1>As The Palaces Burn</h1>
+        <p style={{ width: "500px", color: "white" }}>
+          The fiends have gagged a generation of pacified fools Bound by our
+          greed a nation enslaved as corporate tools Arise and race the legacy
+          of their lies To realize that this in itself is an ascension Towards
+          the day we revolt As the seeds you've cast away take hold
+        </p>
       </div>
       <div className="scrl" style={titles}>
         <h1>Blacken The Cursed Sun</h1>
+        <p style={{ width: "500px", color: "white" }}>
+          Seize a darkened day, There's only hell to pay, And no one left to see
+          this prodigal return. Sweet apathy's my toll. You'll mourn the traded
+          soul. I'll dig a deeper hole. Sanctity, a breath away. Just a breath
+          away. Blacken the cursed sun. You're not the only one, To have sunk so
+          far and low. There is no tomorrow.
+        </p>
       </div>
       <div className="scrl">
         <h1>Hjärtat vet vad handen gör</h1>

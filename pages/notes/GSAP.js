@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import data from "./TabsGasp.json";
+import Image from "next/image";
 
 // const ScrollTrigger = dynamic(() => import("gsap/ScrollTrigger"), {
 //   ssr: false,
@@ -44,6 +45,53 @@ const GSAP = () => {
     return () => ctx.revert();
   }, []);
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      const boxes = self.selector(".yntkts");
+      boxes.forEach((box) => {
+        gsap.from(box, {
+          y: 200,
+          duration: 2,
+          opacity: 0,
+          scrollTrigger: {
+            id: 1,
+            trigger: box,
+            start: "top bottom",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
+    }, boxRef);
+    return () => ctx.revert();
+  }, []);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      const boxes = self.selector(".zxc");
+      boxes.forEach((box) => {
+        gsap.fromTo(
+          box,
+          {
+            x: 600,
+            opacity: 0,
+          },
+          {
+            x: 100,
+            duration: 2,
+            opacity: 1,
+            scrollTrigger: {
+              id: 1,
+              trigger: box,
+              start: "top bottom",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      });
+    }, boxRef);
+    return () => ctx.revert();
+  }, []);
+
   useEffect(() => {
     let test1 = document.querySelector(".test1");
     let test2 = document.querySelector(".test2");
@@ -56,18 +104,6 @@ const GSAP = () => {
       x: 200,
       rotation: 360,
     });
-
-    // boxes.forEach(box => {
-    //   gsap.to(box, {
-    //     x: 200,
-    //     scrollTrigger: {
-    //       id: 1,
-    //     trigger: "box",
-    //     start: "top bottom",
-    //     toggleActions: "play none none reverse",
-    //     }
-    //   })
-    // })
 
     // gsap.fromTo(
     //   q(".scrl"),
@@ -89,18 +125,18 @@ const GSAP = () => {
     //   }
     // );
 
-    gsap.from(q(".yntkts"), {
-      scrollTrigger: {
-        id: 1,
-        trigger: ".yntkts",
-        start: "top bottom",
-        toggleActions: "play none none reverse",
-      },
-      stagger: 0.2,
-      y: 200,
-      duration: 2,
-      opacity: 0,
-    });
+    // gsap.from(q(".yntkts"), {
+    //   scrollTrigger: {
+    //     id: 1,
+    //     trigger: ".yntkts",
+    //     start: "top bottom",
+    //     toggleActions: "play none none reverse",
+    //   },
+    //   stagger: 0.2,
+    //   y: 200,
+    //   duration: 2,
+    //   opacity: 0,
+    // });
   }, []);
 
   useEffect(() => {
@@ -195,6 +231,7 @@ const GSAP = () => {
         </p>
       </div>
       <div className="moveBox" style={movingBox}></div>
+      <h3>SCROLL DOWN TO SEE SOME ANIMATIONS</h3>
       <div className="fromTest">
         <h1>Blackwater Park</h1>
       </div>
@@ -264,6 +301,14 @@ const GSAP = () => {
           immer Die Vernunft begraben für immer
         </p>
       </div>
+      <div className="yntkts">
+        <h1>Anthem to the Welkin at Dusk</h1>
+        <p style={{ width: "500px", color: "white" }}>
+          Suddenly, his mournful cries were stunned. Out of the cold mist came
+          three enthralling ships. Sails torn by many a storm, and the bows
+          adorned by the Most fierce gargoyles he'd ever laid eyes upon.
+        </p>
+      </div>
 
       <div ref={bounceRef}>
         <div style={{ display: "flex" }}>
@@ -293,6 +338,32 @@ const GSAP = () => {
           </div>
         </div>
       </div>
+
+      <div>
+        <div className="zxc">
+          <h1>Where Shadows Forever Reign</h1>
+          <p style={{ width: "500px", color: "white" }}>
+            From tombs of forgotten times I summon thee from thy sleep Across
+            the river, ferocious and wild From the graves and vaults of my
+            thoughts I call for you my brother let me leave this awful life And
+            drift away beyond the borders of this realm You wandered off before
+            me, now come back and pick me up Unchain my soul and bring me where
+            all light will fade
+          </p>
+        </div>
+        <div className="zxc">
+          <h1>Dendam Gondorvwo Penvnggv Balai Desa Svkatani</h1>
+          <p style={{ width: "500px", color: "white" }}>
+            6 bvlan belakangan ini balai desa ini merasa tak aman dan nyaman
+            tiap hari selalv kav banting meja dan kvrsi ini kav lempar mesin
+            ketik pvnya pak carik kav banting pintv rvangan pak jogotirto
+            apalagi sekarang malam jvmat kliwon kav semakin mvrka dan nesv tiada
+            tara kav acak2 seisi balai desa tercinta ini
+          </p>
+        </div>
+      </div>
+
+      <img src="https://www.football-stadiums.co.uk/images/moor-lane/g.jpg" />
     </div>
   );
 };

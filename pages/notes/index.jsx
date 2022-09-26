@@ -196,6 +196,11 @@ const Pages = ({ theData }) => {
             <a>GSAP</a>
           </Link>
         </li>
+        <li>
+          <Link href="notes/Country">
+            <a>Country</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

@@ -35,9 +35,7 @@ const index = ({ country }) => {
           })
           .map((x, index) => {
             return (
-              <Link
-                href={`https://restcountries.com/v3.1/name/${x.name.common}`}
-              >
+              <Link href={`/notes/Country/${x.name.common}`}>
                 <div
                   style={{
                     display: "flex",

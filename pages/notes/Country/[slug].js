@@ -4,8 +4,12 @@ const Detail = ({ data }) => {
   console.log(data);
   return (
     <div>
-      <div>{data.name.common}</div>
-      <div>{data.capital[0]}</div>
+      <div>
+        <h1>{data.name.common}</h1>
+      </div>
+      <div>Official Name: {data.name.official}</div>
+      <div>Capital: {data.capital[0]}</div>
+      <div>Population: {data.population}</div>
     </div>
   );
 };

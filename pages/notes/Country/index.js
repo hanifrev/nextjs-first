@@ -1,8 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { gsap } from "gsap";
 
 const index = ({ country }) => {
   const [search, setSearch] = useState("");
+
+  const theRef = useRef();
+
+  const x = gsap.utils.selector(theRef);
+
+  useEffect(() => {
+    gsap.from(x(".theList"), { y: 200, duration: 2, stagger: 0.1 });
+  });
 
   const list = {
     display: "grid",
@@ -12,7 +21,7 @@ const index = ({ country }) => {
   };
 
   return (
-    <div>
+    <div ref={theRef}>
       <div>
         <input
           type="text"
@@ -37,6 +46,7 @@ const index = ({ country }) => {
             return (
               <Link href={`/notes/Country/${x.name.common}`}>
                 <div
+                  className="theList"
                   style={{
                     display: "flex",
                     flexDirection: "column",

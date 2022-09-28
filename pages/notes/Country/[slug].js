@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const Detail = ({ data }) => {
+  const box = useRef();
+  const x = gsap.utils.selector(box);
+
+  useEffect(() => {
+    gsap.fromTo(x(".cont"), { y: 400 }, { y: 50 });
+  });
+
   console.log(data);
   return (
-    <div>
-      <div>
-        <h1>{data.name.common}</h1>
+    <div ref={box}>
+      <div className="cont">
+        <div className="nameNation">
+          <h1>{data.name.common}</h1>
+        </div>
+        <div>Official Name: {data.name.official}</div>
+        <div>Capital: {data.capital[0]}</div>
+        <div>Population: {data.population}</div>
       </div>
-      <div>Official Name: {data.name.official}</div>
-      <div>Capital: {data.capital[0]}</div>
-      <div>Population: {data.population}</div>
     </div>
   );
 };

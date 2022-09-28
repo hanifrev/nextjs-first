@@ -10,8 +10,13 @@ const index = ({ country }) => {
   const x = gsap.utils.selector(theRef);
 
   useEffect(() => {
-    gsap.from(x(".theList"), { y: 200, duration: 2, stagger: 0.1 });
-  });
+    gsap.from(x(".theList"), {
+      y: 200,
+      duration: 1.5,
+      stagger: 0.1,
+      opacity: 0,
+    });
+  }, []);
 
   const list = {
     display: "grid",

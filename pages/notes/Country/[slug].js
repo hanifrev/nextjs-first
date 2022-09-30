@@ -6,7 +6,7 @@ const Detail = ({ data }) => {
   const x = gsap.utils.selector(box);
 
   useEffect(() => {
-    gsap.fromTo(x(".cont"), { y: 400 }, { y: 50 });
+    gsap.fromTo(x(".cont"), { y: 400, x: 200 }, { y: 50, x: 0 });
   });
 
   console.log(data);

@@ -63,7 +63,7 @@ const index = ({ data }) => {
 
 export default index;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { data } = await axios.get(
     `https://637b94246f4024eac2121bed.mockapi.io/dataUser`
   );

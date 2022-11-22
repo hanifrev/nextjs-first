@@ -1,5 +1,6 @@
 import axios from "axios";
 import Link from "next/link";
+import { router } from "next/router";
 import React, { useState } from "react";
 
 const Crud3 = ({ data }) => {
@@ -42,7 +43,9 @@ const Crud3 = ({ data }) => {
             <div style={{ width: "270px" }}>{x.title}</div>
             <div style={{ width: "270px" }}>{x.body}</div>
             <div>
-              <button>UPDATE</button>
+              <button onClick={() => router.push(`/notes/the-crud/${x.id}`)}>
+                UPDATE
+              </button>
               <button onClick={() => deleteArticle(x.id)}>DELETE</button>
             </div>
           </div>

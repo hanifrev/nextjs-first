@@ -23,6 +23,8 @@ const create = () => {
 
   return (
     <div>
+      {article && <div>{article}</div>}
+      {isLoading && <div>Loading...</div>}
       <form onSubmit={submitArticle}>
         <div>
           <label>User ID</label>

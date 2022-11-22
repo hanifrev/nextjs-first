@@ -201,6 +201,11 @@ const Pages = ({ theData }) => {
             <a>Country</a>
           </Link>
         </li>
+        <li>
+          <Link href="notes/newcrud">
+            <a>New CRUD</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

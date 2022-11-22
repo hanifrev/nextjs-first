@@ -64,7 +64,9 @@ const index = ({ data }) => {
 export default index;
 
 export async function getStaticProps() {
-  const { data } = await axios.get(`${process.env.API_DATA}/dataUser`);
+  const { data } = await axios.get(
+    `https://637b94246f4024eac2121bed.mockapi.io/dataUser`
+  );
   return {
     props: {
       data: data || {},

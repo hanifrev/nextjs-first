@@ -58,7 +58,9 @@ const Crud3 = ({ data }) => {
 export default Crud3;
 
 export async function getStaticProps() {
-  const { data } = await axios.get(`${process.env.API_ENDPOINT}/posts`);
+  const { data } = await axios.get(
+    `https://jsonplaceholder.typicode.com/posts`
+  );
 
   return {
     props: {

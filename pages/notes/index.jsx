@@ -206,6 +206,11 @@ const Pages = ({ theData }) => {
             <a>New CRUD</a>
           </Link>
         </li>
+        <li>
+          <Link href="notes/CrudRTK">
+            <a>CRUD redux toolkit</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );

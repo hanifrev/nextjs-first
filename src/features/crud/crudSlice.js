@@ -19,14 +19,17 @@ export const crudSlice = createSlice({
       return deleted;
     },
     updateItem(state, action) {
-      state.items = state.items.map((item) => {
-        if (item.id === action.payload.id) {
-          return {
-            ...item,
-            ...action.payload,
-          };
-        }
-      });
+      // const { id, items } = action.payload;
+      // const updated = state.map((list) => {
+      //   if (list.id === id) {
+      //     return { ...list, items };
+      //   }
+      //   return list;
+      // });
+      // return updated;
+      const { id, items } = action.payload;
+      const updated = state.find((item) => item.id === id);
+      updated.items = items;
     },
   },
 });
